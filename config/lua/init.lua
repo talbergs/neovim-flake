@@ -10,6 +10,9 @@ require "user.lualine"
 require "user.treesitter"
 require "user.autocommands"
 require "user.lsp"
+require "user.popup"
+
+print("eee")
 
 -- require "user.plugins"
 -- require "user.spellsitter"

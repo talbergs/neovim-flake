@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "colorizer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1591879145,
+        "narHash": "sha256-6YrnItxExL2C8pNIdLd+hXCjsB2MbZANwWkah6dreD8=",
+        "owner": "norcalli",
+        "repo": "nvim-colorizer.lua",
+        "rev": "36c610a9717cc9ec426a07c8e6bf3b3abcb139d6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "norcalli",
+        "repo": "nvim-colorizer.lua",
+        "type": "github"
+      }
+    },
     "lspconfig": {
       "flake": false,
       "locked": {
@@ -64,13 +80,32 @@
         "url": "file:///home/mt/NIXPKGS"
       }
     },
+    "null-ls": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1676936752,
+        "narHash": "sha256-uGyXBh1SpNpOkUlZpQ0RWRTMW6x3uhg4x07hmjkpSro=",
+        "owner": "jose-elias-alvarez",
+        "repo": "null-ls.nvim",
+        "rev": "689cdd78f70af20a37b5309ebc287ac645ae4f76",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jose-elias-alvarez",
+        "repo": "null-ls.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "colorizer": "colorizer",
         "lspconfig": "lspconfig",
         "melange": "melange",
         "neodev": "neodev",
         "nixpkgs": "nixpkgs",
+        "null-ls": "null-ls",
         "telescope-tabs": "telescope-tabs",
+        "ts-context": "ts-context",
         "ts-playground": "ts-playground",
         "virt-column": "virt-column",
         "zen": "zen"
@@ -89,6 +124,22 @@
       "original": {
         "owner": "LukasPietzschmann",
         "repo": "telescope-tabs",
+        "type": "github"
+      }
+    },
+    "ts-context": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1676292803,
+        "narHash": "sha256-DBbsv7nefBwgUtBqviPVzd8/Kqh+oy7cjWhiFz4vMjU=",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter-context",
+        "rev": "895ec44f5c89bc67ba5440aef3d1f2efa3d59a41",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter-context",
         "type": "github"
       }
     },

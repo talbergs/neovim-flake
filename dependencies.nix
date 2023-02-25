@@ -5,4 +5,8 @@ pkgs : with pkgs; [
     sumneko-lua-language-server
     pyright
     ripgrep
+    rnix-lsp # Unmaintained? Poor suggestions..
+    nil # Nix LS (wip).
+    nixpkgs-fmt # Nix formatter.
+    statix # Static nix checker.
 ]

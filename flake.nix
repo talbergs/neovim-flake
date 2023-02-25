@@ -3,6 +3,9 @@
     # nixpkgs.url = github:nixos/nixpkgs;
     nixpkgs.url = "/home/mt/NIXPKGS";
 
+    ts-context.url = github:nvim-treesitter/nvim-treesitter-context;
+    ts-context.flake = false;
+
     ts-playground.url = github:nvim-treesitter/playground;
     ts-playground.flake = false;
 
@@ -18,11 +21,17 @@
     telescope-tabs.url = github:LukasPietzschmann/telescope-tabs;
     telescope-tabs.flake = false;
 
+    colorizer.url = github:norcalli/nvim-colorizer.lua;
+    colorizer.flake = false;
+
     neodev.url = github:folke/neodev.nvim;
     neodev.flake = false;
 
     lspconfig.url = github:neovim/nvim-lspconfig;
     lspconfig.flake = false;
+
+    null-ls.url = github:jose-elias-alvarez/null-ls.nvim;
+    null-ls.flake = false;
 
   };
 
@@ -45,7 +54,10 @@
     nvim = pkgs.wrapNeovim pkgs.neovim-unwrapped {
       extraMakeWrapperArgs = ''--prefix PATH : "${pkgs.lib.makeBinPath dependencies}"'';
       configure = {
-        customRC = ''lua << EOF
+        # extraLuaPackages = [ "${self}/config/lua/?.lua" ];
+        customRC = ''
+set runtimepath+=${self}/config
+lua << EOF
 package.path = "${self}/config/lua/?.lua;" .. package.path
 
 require "user.options"
@@ -60,6 +72,7 @@ require "user.lualine"
 require "user.treesitter"
 require "user.autocommands"
 require "user.lsp"
+require "user.popup"
 
 EOF
         '';
