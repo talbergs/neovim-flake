@@ -1,0 +1,146 @@
+{
+  "nodes": {
+    "lspconfig": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1676813893,
+        "narHash": "sha256-lnFo6N82WLXy8o3QE7+Kj91wal/8l+BSbC4SE8VitQ0=",
+        "owner": "neovim",
+        "repo": "nvim-lspconfig",
+        "rev": "f0d9150fe8486d0f74757ed9d8987bfc33c7ff44",
+        "type": "github"
+      },
+      "original": {
+        "owner": "neovim",
+        "repo": "nvim-lspconfig",
+        "type": "github"
+      }
+    },
+    "melange": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1675988929,
+        "narHash": "sha256-zlOhjUdiezOjNmFO7YHM5JLX17N25mELfZsaEdwdwYE=",
+        "owner": "savq",
+        "repo": "melange-nvim",
+        "rev": "2c8250c435279638b5a244acfaf9fcdb702a45cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "savq",
+        "repo": "melange-nvim",
+        "type": "github"
+      }
+    },
+    "neodev": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1676325564,
+        "narHash": "sha256-sWySidDru9aWMiYg7Js0iBte3qN5XI3dEvAR41c4a0w=",
+        "owner": "folke",
+        "repo": "neodev.nvim",
+        "rev": "a81e749d0fe8429cd340b2e40f274b344bef42ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "neodev.nvim",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1677318211,
+        "narHash": "sha256-GwT3Atzr2btlDtsbwEpicBbs15tWbybBMfo2M0CnHFo=",
+        "ref": "refs/heads/master",
+        "rev": "64a75102059d05e5ab2bdcf1b57b34d0d103da66",
+        "shallow": true,
+        "type": "git",
+        "url": "file:///home/mt/NIXPKGS"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "file:///home/mt/NIXPKGS"
+      }
+    },
+    "root": {
+      "inputs": {
+        "lspconfig": "lspconfig",
+        "melange": "melange",
+        "neodev": "neodev",
+        "nixpkgs": "nixpkgs",
+        "telescope-tabs": "telescope-tabs",
+        "ts-playground": "ts-playground",
+        "virt-column": "virt-column",
+        "zen": "zen"
+      }
+    },
+    "telescope-tabs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1675592081,
+        "narHash": "sha256-Wxrk0E9194g2RvevpHakLFQ6yuE1V7fHXVdDggK4tp4=",
+        "owner": "LukasPietzschmann",
+        "repo": "telescope-tabs",
+        "rev": "df6e9eb2d7338a7ebe45f306582d5456dab8695c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LukasPietzschmann",
+        "repo": "telescope-tabs",
+        "type": "github"
+      }
+    },
+    "ts-playground": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1676666900,
+        "narHash": "sha256-e8wqVyXfZ8qmURbCO/4pOVDSSHZEaRTGZLK5ZEh0AIY=",
+        "owner": "nvim-treesitter",
+        "repo": "playground",
+        "rev": "4044b53c4d4fcd7a78eae20b8627f78ce7dc6f56",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "playground",
+        "type": "github"
+      }
+    },
+    "virt-column": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1674188823,
+        "narHash": "sha256-6EbEzg2bfoHmVZyggwvsDlW9OOA4UkcfO0qG0TEDKQs=",
+        "owner": "lukas-reineke",
+        "repo": "virt-column.nvim",
+        "rev": "93b40ea038f676f5a72d7d1f2336fe7b051fc0ce",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lukas-reineke",
+        "repo": "virt-column.nvim",
+        "type": "github"
+      }
+    },
+    "zen": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1675843667,
+        "narHash": "sha256-F/BKOdFjm8SCCvWWry+n1OLUNQ9y/Mp0Y3batkJ4jdA=",
+        "owner": "folke",
+        "repo": "zen-mode.nvim",
+        "rev": "3c92f503823088862ca2a7809d1c7edc90fb92fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "zen-mode.nvim",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
