@@ -3,19 +3,55 @@ if not status_ok then
   return
 end
 
+local palette = require('melange.palettes.dark')
+
+  -- a = {
+  --   bg = "#292522",
+  --   com = "#C1A78E",
+  --   fg = "#ECE1D7",
+  --   float = "#34302C",
+  --   sel = "#403A36",
+  --   ui = "#867462"
+  -- },
+  -- b = {
+  --   blue = "#A3A9CE",
+  --   cyan = "#89B3B6",
+  --   green = "#85B695",
+  --   magenta = "#CF9BC2",
+  --   red = "#D47766",
+  --   yellow = "#EBC06D"
+  -- },
+  -- c = {
+  --   blue = "#7F91B2",
+  --   cyan = "#7B9695",
+  --   green = "#78997A",
+  --   magenta = "#B380B0",
+  --   red = "#BD8183",
+  --   yellow = "#E49B5D"
+  -- },
+  -- d = {
+  --   blue = "#273142",
+  --   cyan = "#253333",
+  --   green = "#233524",
+  --   magenta = "#422741",
+  --   red = "#7D2A2F",
+  --   yellow = "#8B7449"
+  -- }
+
+
 local astyle = {
-  bg = "#081633",
-  fg = "#A9A1E1",
+  bg = palette.a.float,
+  fg = palette.a.ui,
 }
 
 local bstyle = {
-  bg = "#081633",
+  bg = palette.a.float,
 }
 
 local cstyle = {
-  bg = "#081633",
-  fg = "#A9A1E1",
-  gui = 'bold',
+  bg = palette.a.float,
+  fg = palette.c.yellow,
+  gui = 'bold,underline',
 }
 
 local fname = require('lualine.components.filename'):extend()
@@ -103,31 +139,6 @@ lualine.setup {
         timer = { progress_enddelay = 500, spinner = 1000, lsp_client_name_enddelay = 1000 },
         spinner_symbols = { '🌑 ', '🌒 ', '🌓 ', '🌔 ', '🌕 ', '🌖 ', '🌗 ', '🌘 ' },
       },
-      'branch',
-      {
-        'diagnostics',
-
-        -- Table of diagnostic sources, available sources are:
-        --   'nvim_lsp', 'nvim_diagnostic', 'nvim_workspace_diagnostic', 'coc', 'ale', 'vim_lsp'.
-        -- or a function that returns a table as such:
-        --   { error=error_cnt, warn=warn_cnt, info=info_cnt, hint=hint_cnt }
-        sources = { 'nvim_diagnostic' },
-
-        -- Displays diagnostics for the defined severity types
-        sections = { 'error', 'warn', 'info', 'hint' },
-
-        diagnostics_color = {
-          -- Same values as the general color option can be used here.
-          error = 'DiagnosticError', -- Changes diagnostics' error color.
-          warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
-          info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
-          hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
-        },
-        symbols = {error = 'E', warn = 'W', info = 'I', hint = 'H'},
-        colored = true,           -- Displays diagnostics status in color if set to true.
-        update_in_insert = false, -- Update diagnostics in insert mode.
-        always_visible = false,   -- Show diagnostics even if there are none.
-      },
     },
     lualine_b = {
       fname
@@ -147,7 +158,13 @@ lualine.setup {
     },
     -- Did the :Taboo (tab-rename) plugin broke these tabs?
     lualine_b = {
-      {'tabs', mode = 0,},
+      {'tabs', mode = 0,
+        tabs_color = {
+        -- Same values as the general color option can be used here.
+        active = cstyle,
+        inactive = astyle,
+      },
+      },
     },
     lualine_x = {
       'diagnostics',
